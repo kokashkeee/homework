@@ -1,32 +1,33 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("\nЗадание 1");
-        boolean clientOS = false;
-        if (clientOS) {
+        int clientOS = 1;
+        if (clientOS == 1) {
             System.out.println("Установите версию приложения для Android по ссылке");
         } else {
             System.out.println("Установите версию приложения для iOS по ссылке");
         }
 
         System.out.println("\nЗадание 2");
-        boolean clientOS1 = false;
-        int year1 = 2014;
-        if (clientOS1) {
-            if (year1 < 2015) {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            } else {
-                System.out.println("Установите версию приложения для Android по ссылке");
-            }
-        } else if (year1 < 2015) {
+        int clientOS1 = 1;
+        int clientDeviceYear = 2014;
+        if (clientOS1 == 1 && clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        }
+        if (clientOS1 == 1 && clientDeviceYear >= 2015) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        }
+        if (clientOS1 == 0 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else {
+        }
+        if (clientOS1 == 0 && clientDeviceYear >= 2015) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         }
 
         System.out.println("\nЗадание 3");
         int year = 2021;
         int cly = year - 1584;
-        if (cly % 4 == 0) {
+        if ((cly % 400 == 0 && cly % 100 == 0) || cly % 4 == 0) {
             System.out.println(year + " год является високосным");
         } else {
             System.out.println(year + " год не является високосным");
@@ -35,14 +36,14 @@ public class Main {
         System.out.println("\nЗадание 4");
         int deliveryDistance = 95;
         int deliveryTimeCount = 1;
-        if (deliveryDistance > 20) {
+        if (deliveryDistance > 20 && deliveryDistance <= 60) {
             deliveryTimeCount += 1;
-            if (deliveryDistance > 60) {
-                deliveryTimeCount += 1;
-                if (deliveryDistance > 100) {
-                    deliveryTimeCount += 1;
-                }
-            }
+        }
+        if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            deliveryTimeCount += 1;
+        }
+        if (deliveryDistance > 100) {
+            deliveryTimeCount += 1;
         }
         if (deliveryTimeCount == 4) {
             System.out.println("доставки нет");
