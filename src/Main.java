@@ -27,7 +27,7 @@ public class Main {
         System.out.println("\nЗадание 3");
         int year = 2021;
         int cly = year - 1584;
-        if (cly % 4 == 0) {
+        if ((cly % 400 == 0 && cly % 100 == 0) || cly % 4 == 0) {
             System.out.println(year + " год является високосным");
         } else {
             System.out.println(year + " год не является високосным");
