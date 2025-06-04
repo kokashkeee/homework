@@ -1,73 +1,55 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("\nЗадание 1");
-        int clientOS = 1;
-        if (clientOS == 1) {
-            System.out.println("Установите версию приложения для Android по ссылке");
-        } else {
-            System.out.println("Установите версию приложения для iOS по ссылке");
+        System.out.println("Задание 1");
+        for (int i = 1; i <= 10; i++) {
+            System.out.printf(i + " ");
         }
-
-        System.out.println("\nЗадание 2");
-        int clientOS1 = 1;
-        int clientDeviceYear = 2014;
-        if (clientOS1 == 1 && clientDeviceYear < 2015) {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        System.out.println("\n\nЗадание 2");
+        for (int i = 10; i >= 1; i--) {
+            System.out.printf(i + " ");
         }
-        if (clientOS1 == 1 && clientDeviceYear >= 2015) {
-            System.out.println("Установите версию приложения для Android по ссылке");
+        System.out.println("\n\nЗадание 3");
+        for (int i = 0; i <= 17; i += 2) {
+            System.out.printf(i + " ");
         }
-        if (clientOS1 == 0 && clientDeviceYear < 2015) {
-            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        System.out.println("\n\nЗадание 4");
+        for (int i = 10; i >= -10; i--) {
+            System.out.printf(i + " ");
         }
-        if (clientOS1 == 0 && clientDeviceYear >= 2015) {
-            System.out.println("Установите версию приложения для iOS по ссылке");
-        }
-
-        System.out.println("\nЗадание 3");
-        int year = 2021;
-        int cly = year - 1584;
-        if ((cly % 400 == 0 && cly % 100 == 0) || (cly % 4 == 0)) {
-            System.out.println(year + " год является високосным");
-        } else {
-            System.out.println(year + " год не является високосным");
-        }
-
-        System.out.println("\nЗадание 4");
-        int deliveryDistance = 95;
-        int deliveryTimeCount = 1;
-        if (deliveryDistance > 20 && deliveryDistance <= 60) {
-            deliveryTimeCount += 1;
-        }
-        if (deliveryDistance > 60 && deliveryDistance <= 100) {
-            deliveryTimeCount += 1;
-        }
-        if (deliveryDistance > 100) {
-            deliveryTimeCount += 1;
-        }
-        if (deliveryTimeCount == 4) {
-            System.out.println("доставки нет");
-        } else {
-            System.out.println("Потребуется дней: " + deliveryTimeCount);
-        }
-
-        System.out.println("\nЗадание 5");
-        int monthNumber = 9;
-        if (monthNumber <= 12) {
-            switch (monthNumber) {
-                case 1, 2, 12:
-                    System.out.println("зима");
-                    break;
-                case 3, 4, 5:
-                    System.out.println("весна");
-                    break;
-                case 6, 7, 8:
-                    System.out.println("лето");
-                    break;
-                case 9, 10, 11:
-                    System.out.println("осень");
-                    break;
+        System.out.println("\n\nЗадание 5");
+        for (int i = 1904; i <= 2096; i++) {
+            if (i % 4 == 0) {
+                System.out.printf(i + " ");
             }
+        }
+        System.out.println("\n\nЗадание 6");
+        for (int i = 7; i <= 98; i += 7) {
+            System.out.printf(i + " ");
+        }
+        System.out.println("\n\nЗадание 7");
+        for (int i = 1; i <= 512; i *= 2) {
+            System.out.printf(i + " ");
+        }
+        System.out.println("\n\nЗадание 8");
+        int money = 29000;
+        int total = 0;
+        for (int i = 1; i <= 12; i++) {
+            total += money;
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей");
+        }
+        System.out.println("\nЗадание 9");
+        int money1 = 29000;
+        int total1 = 0;
+        for (int i = 1; i <= 12; i++) {
+            total1 *= 1.01;
+            total1 += money1;
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + total1 + " рублей");
+        }
+        System.out.println("\nЗадание 10");
+        int x;
+        for (int i = 1; i <= 10; i++) {
+            x = 2 * i;
+            System.out.println("2*" + i + "=" + x);
         }
     }
 }
